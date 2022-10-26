@@ -1,0 +1,20 @@
+char x = buffer[0];
+               int z = 0, j,w;
+               char content[BUF_SIZE];
+               char pseudo [BUF_SIZE];
+               int k = 0;
+               while (x!='@' && z<BUF_SIZE)
+               {
+                  content[z] = x;                  
+                  z++;
+                  x = buffer[z];
+                  printf("%c\n \r",x);              
+               }
+               printf("%d\n \r",z);
+               printf("%c\n \r",x);              
+               if(x=='@' && z != BUF_SIZE){
+                  for(j = z+ 1; j < BUF_SIZE; ++ j){
+                     pseudo[k++] = buffer[j];
+                  }
+                  printf("%s  : %s\n \r",content,pseudo);
+               } 
